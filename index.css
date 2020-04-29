@@ -1,0 +1,225 @@
+/* =================================================================
+ * Code général 
+ * ================================================================*/
+
+	* {
+		box-sizing: border-box;
+	}
+	b {
+		margin-top: 5px;
+	}
+	li {
+		position: relative;
+	}
+	body {
+		position: relative;
+	}
+/* =================================================================
+ * Le header de la page contenant le logo, le nav en h3
+ * ================================================================*/
+
+	header {
+		margin-bottom: 8em;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		background-image: url("projet_5.png");
+		background-repeat: no-repeat;
+		background-position: top 172px right 165px;
+		background-size: 700px;
+	}
+	.logo {
+		height: 450px;
+		width: 200px;
+	}
+
+	h3 {
+		display: inline-block;
+		margin: 1em;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	header div+div {
+		margin-right: 30px;
+	}
+/* =================================================================
+ * Le header de la page contenant le mot shopify souligné
+ * ================================================================*/
+
+	header div+div div+div {
+		position: absolute;
+		top: 200px;
+		right: 320px;
+		text-align: center;
+	}
+
+	div h1 {
+		font-size: 3em;
+	}
+/* =================================================================
+ * la section 1 c'est la section contenant l'image des clients
+ * ================================================================*/
+
+	.section1 {
+		text-align: center;
+		background-color: black;
+		position: relative;
+	}
+ 		/* =================================================================
+ 		 * le a.yoko est le logo de yoko qui dirige vers son site internet
+ 		 * ================================================================*/
+
+				a.yoko {
+					padding: 2em 5em;
+					background-color: transparent;
+					position: absolute;
+					left: 190px;
+					top: 130px;
+				}
+/* =================================================================
+ * Ce container c'est le texte qui se trouve dans les slides 
+ * ================================================================*/
+
+	.container {
+		position: absolute;
+		width: 400px;
+		height: 23em;
+		background-color: white;
+		margin: 1em;
+		bottom: 150px;
+		left: 660px;
+		background-image: url("projet_5.png");
+		background-size:306px;
+		background-repeat: no-repeat;
+		background-position: top 232px right 50px; 
+	}
+
+	.container .defiler {
+		margin: 1em 2em;
+		text-align: center;	
+	}
+	.container a:hover {
+		font-style: italic; 
+	}
+
+
+/* =================================================================
+ * FONT-FACE : karla regular et fontawesome;
+ * ================================================================*/
+
+	@font-face {
+		font-family: 'karla-regular';
+		src : url("Karla-Regular.ttf");
+	}
+	h1, p, h2, h3 {
+		font-family: 'karla-regular';
+	}
+	@font-face {
+		font-family: 'FontAwesome';
+		src: url("https://fontawesome.com/icons/chevron-right?style=solid");
+	}
+
+/* =================================================================
+ * Modification des directions de navigation des slides (flexslider)
+ * ================================================================*/
+
+	.flexslider .flex-direction-nav .flex-next {
+		font-family: 'FontAwesome';
+	}
+	ul.flex-direction-nav {
+	    position: absolute;
+	    top: 350px;
+	    left: 72em;
+	}
+	.flex-nav-prev {
+		display: none;
+	}
+/* =================================================================
+ * Le texte déroulant en animation à l'infini sans javascript
+ * ================================================================*/
+
+	body section+section+section {
+		width: 100%;
+		background-color: #fccd40;
+		color:white;
+		overflow: hidden;
+		position:absolute;
+		bottom: -3.5em;
+		left: 0;
+	}
+	body section+section+section:after {
+		position: absolute;
+		content: attr(data-text);
+		animation: defilement 15s infinite linear;
+	}
+	body section+section+section h2, body section+section+section:after {
+		display: inline-block;
+		white-space: nowrap;
+		font-size: 27px;
+	}
+	body section+section+section h2 {
+		
+		animation: mymove 15s infinite linear;
+	}
+/* =================================================================
+ * Les keyframes 
+ * ================================================================*/
+
+	@keyframes mymove {
+	  0% {
+	     margin-left: 0%;      /* position initiale à droite */
+	  }
+	  100% {
+	   	margin-left: -100%;  /* position finale à gauche */
+	  }
+	}
+	  @keyframes defilement {
+	  0% {
+	    margin-left: 100%;      /* position initiale à gauche */
+	  }
+	  100% {
+	      margin-left: 0%;  /* position finale à droite  */
+	  }
+	}
+/* =================================================================
+ * Media queries pour le responsive design 
+ * ================================================================*/
+
+	@media screen and (max-width: 600px) {
+		body {
+			width: 500px;
+		}
+		header {
+			width: 500px;
+		}
+		header div {
+			display: block;
+		}
+		section {
+			width: 500px;
+		}
+		header div+div div:first-child {
+			display: none;
+		}
+		.logo {
+			width: 100px;
+			height: 200px;
+		}
+		header div+div div+div {
+			top: 44px;
+			left: 40px;
+			text-align: center;
+			width: 100%;
+		}
+		header div+div div+div h1 {
+			font-size: 1em;
+		}
+		.section1 div img {
+			width: 500px;
+		}
+
+	 }

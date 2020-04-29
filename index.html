@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test technique</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="index.css">
+   	<link rel="stylesheet" href="flexslider.css" type="text/css" media="screen">	
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+	<!-- Début 1ère section : 'header'  !-->
+	<header>
+		<div>
+			<img src="LOgo.png" class="logo">
+		</div>
+		<div>
+			<div>
+				<h3><a href="#portfolio">Nos clients</a></h3>
+				<h3><a href="#slider">Notre offre</a></h3>
+				<h3><a href="#text infinite">Le studio</a></h3>
+				<h3><a href="">Contact</a></h3>
+			</div>
+			<div>
+				<p>SINCE 2016</p>
+
+	<!-- fin section header et début section 'bannière' !-->
+				<h1>
+					&lt;<b>We create from scratch <br>amazing Shopify/</b>&gt;
+				</h1>
+			</div>
+		</div>
+	</header>
+
+	<!-- fin section bannière et début section 'portfolio' !-->
+
+	<section class="section1" id="portfolio">
+			<div>
+				<img src="proj4.png">
+				<a href="https://yokoshop.com" style="text-decoration: none" class="yoko">
+					
+				</a>
+			</div>
+	</section>
+
+<!-- 
+	fin section bannière et début section 'slider' 
+	Pour cette section, j'ai utilisé la librairie JQUERY 
+	en l'occurence flexslider pour les slides.
+!-->
+
+	<section id="slider">
+		<div id="slider" class="flexslider">
+			<ul class="slides">
+				<li>
+					<img src="Artboard_2.jpg" class="slide1">
+
+	<!-- la classe container contient le text qui se trouve sur les slides !-->
+
+					<div class="container">
+						<div class="defiler">
+							<p>FROM SCRATCH /</p>
+							<h1>SEASONLY</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.
+							</p>
+							<a href="">
+								<b class="gras">&lt;Voir plus/&gt;</b>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="Artboard_1.jpg" class="slide2">
+
+					<div class="container">
+						<div class="defiler">
+							<p>FROM SCRATCH /</p>
+							<h1>SEASONLY</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.
+							</p>
+							<a href="">
+								<b class="gras">&lt;Voir plus/&gt;</b>
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section data-text="<h2><b>! Découvrez nos croquettes sur mesure sur <span>graou.co</span>/ En langue bretonne, Studio Zerance se dit studio zerance / C'est plus agréable en vrai, venez discuter de votre projet autour d'un thé dans nos supers bureaux du sentier / Pour votre sécurité, veuillez conserver une distance de sécurité d'1,5 m avec nos développeurs, merci / Nous étions 4 en mai 2018, nous sommes 14 en 2020 / Studio Zerance, experts shopify de pere en fils, depuis 2016 / Nous sommes également des e-commerçants</b></h2>" id="text infinite">
+		<h2>
+			<b>! Découvrez nos croquettes sur mesure sur <span>graou.co</span>/ En langue bretonne, Studio Zerance se dit studio zerance / C'est plus agréable en vrai, venez discuter de votre projet autour d'un thé dans nos supers bureaux du sentier / Pour votre sécurité, veuillez conserver une distance de sécurité d'1,5 m avec nos développeurs, merci / Nous étions 4 en mai 2018, nous sommes 14 en 2020 / Studio Zerance, experts shopify de pere en fils, depuis 2016 / Nous sommes également des e-commerçants</b>
+		</h2>
+	</section>
+	
+	<script type="text/javascript" src="jquery.flexslider-min.js"></script>
+	<script type="text/javascript">
+			$(window).load(function() {
+			  $('.flexslider').flexslider({
+			  	animation : "slide",
+			  	pauseOnHover : true
+			  });
+			});
+
+ 	</script>
+
+	
+
+</body>
+</html>
